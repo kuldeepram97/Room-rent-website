@@ -19,21 +19,16 @@
 
   <script>
     function login() {
-      window.location.href = "dashboard.html";
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value;
+
+      if (email === "admin@gmail.com" && password === "123456") {
+        window.location.href = "dashboard.html";
+      } else {
+        alert("Invalid Email or Password");
+      }
     }
   </script>
-<script>
-function login() {
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
 
-  // अभी के लिए डेमो लॉगिन
-  if (email === "admin@gmail.com" && password === "123456") {
-    window.location.href = "dashboard.html";
-  } else {
-    alert("Invalid Email or Password");
-  }
-}
-</script>
 </body>
 </html>
